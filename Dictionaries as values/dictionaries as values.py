@@ -339,7 +339,7 @@ with open(fileout, "w",encoding="utf-8") as outfile:
                 day= dtny_to_string (day, c, len(calc[0]))
                 
                 
-                month = {str(months[b]): day}
+                month = {str(months[b]): day}# Explicity writing str(dictionary key) introduces \" in the output. See json file
                 month= dtny_to_string (month, b, len(months))
                 outfile.write(month)
                 
